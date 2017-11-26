@@ -1,5 +1,5 @@
 <template>
-  <div id="zipInputForm">
+  <div id="ZipInputForm">
     <form id="zipInput" v-on:submit="formSubmit">
       <input type="text" v-model="zipToSubmit" placeholder="Enter a US valid Zip code...">
       <input type="submit" value="lookup">
@@ -10,7 +10,7 @@
 <script>
 
 export default {
-  name: 'zipInputForm',
+  name: 'ZipInputForm',
   data() {
     return {
       zipToSubmit:''

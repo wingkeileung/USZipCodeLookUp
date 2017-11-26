@@ -3,40 +3,34 @@
     <h1>US Zipcode City reverse look up</h1>
     <h5>Powered by Vue.js</h5>
     <ZipInputForm v-on:formSubmit="cityResults" id="form"></ZipInputForm>
-    <CityResults v-text="cityResults"></CityResults>
-    <StateResults v-text="stateResults"></StateResults>
+    <CityResult v-text="apiResult['place name']"></CityResult>
+    <CityResult v-text="apiResult.state"></CityResult>
+    <CityResult v-text="apiResult['state abbreviation']"></CityResult>
+    <CityResult v-text="apiResult.longitude"></CityResult>
+    <CityResult v-text="apiResult.latitude"></CityResult>
   </div>
 </template>
 
 <script>
-import ZipInputForm from './components/zipInputForm';
-import CityResults from './components/cityResults';
-import StateResults from './components/stateResults';
+import ZipInputForm from './components/ZipInputForm';
+import CityResult from './components/CityResult';
 
 export default {
   name: 'app',
   components: {
     ZipInputForm,
-    CityResults,
-    StateResults
+    CityResult
   },
   data: function () {
     return {
-      cityResults: '',
-      stateResults: ''
+      apiResult:''
     }
-  },  
+  },
   methods: {
-    cityResults:function(zipToSubmit){
-      this.$http.get('http://api.zippopotam.us/us/'+zipToSubmit)
+    cityResults:function(text){
+      this.$http.get('http://api.zippopotam.us/us/'+text)
       .then((response) => {
-        this.cityResults = response.places[0]["place name"];
-      });
-    },
-    stateResults:function(zipToSubmit){
-      this.$http.get('http://api.zippopotam.us/us/'+zipToSubmit)
-      .then((response) => {
-        this.stateResults = response.places[0].state;
+        this.apiResult = response.body.places[0]
       });
     }
   }
@@ -44,7 +38,5 @@ export default {
 </script>
 
 <style>
-#app {
-  
-}
+
 </style>
