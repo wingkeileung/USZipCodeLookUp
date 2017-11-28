@@ -4,6 +4,7 @@
       <input type="text" v-model="zipToSubmit" placeholder="Enter a US valid Zip code...">
       <input type="submit" value="lookup">
     </form>
+      <button v-on:click="resetFields" type="button">Clear</button>
   </div>
 </template>
 
@@ -19,6 +20,10 @@ export default {
   methods: {
     formSubmit (e) {
       this.$emit('formSubmit', this.zipToSubmit);
+      e.preventDefault();
+    },
+    resetFields (e) {
+      this.zipToSubmit = '',
       e.preventDefault();
     }
   }

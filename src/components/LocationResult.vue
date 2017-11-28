@@ -1,5 +1,5 @@
 <template>
-  <h2 id="outputField">{{zipToCityResult}}</h2> 
+  <h4>{{zipToCityResult}}</h4>
 </template>
 
 <script>
