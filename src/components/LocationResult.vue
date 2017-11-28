@@ -1,5 +1,5 @@
 <template>
-  <h4>{{zipToCityResult}}</h4>
+  <h5 class="text-success">{{zipToCityResult}}</h5>
 </template>
 
 <script>
