@@ -11,7 +11,7 @@
     <hr>
     <h1>City to Zip Code Look up</h1>
     <cityStateInputForm v-on:formSubmit="CityStateToZip" id="form"></cityStateInputForm>
-    <ZipResult v-text="cityStateToZipResult"></ZipResult>
+    <ZipResult v-for="postCode in cityStateToZipResult" :key="postCode['post code']" v-text="postCode['post code']"></ZipResult>
   </div>
 </template>
 

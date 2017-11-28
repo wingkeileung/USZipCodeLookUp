@@ -1,5 +1,9 @@
 <template>
-  <h2 id="outputField">{{CityStateToZipResult}}</h2> 
+  <ul>
+    <li>
+      <h5>{{CityStateToZipResult}}</h5>
+    </li>
+  </ul>
 </template>
 
 <script>
