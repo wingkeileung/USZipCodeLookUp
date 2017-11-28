@@ -1,10 +1,10 @@
 <template>
   <div id="ZipInputForm">
-    <form id="zipInput" v-on:submit="formSubmit">
-      <input type="text" v-model="zipToSubmit" placeholder="Enter a US valid Zip code...">
-      <input type="submit" value="lookup">
+    <form class="form-control col-md-6 mx-auto" id="zipInput" v-on:submit="formSubmit">
+      <input class="form-control" type="text" v-model="zipToSubmit" placeholder="Enter a US valid Zip code...">
+      <input class="btn btn-info btn-sm" type="submit" value="lookup">
+      <button class="btn btn-secondary btn-sm" v-on:click="resetFields" type="button">Clear</button>
     </form>
-      <button v-on:click="resetFields" type="button">Clear</button>
   </div>
 </template>
 
@@ -29,3 +29,9 @@ export default {
   }
 }
 </script>
+
+<style>
+#zipInput {
+  background: Gainsboro
+}
+</style>

@@ -1,9 +1,5 @@
 <template>
-  <ul>
-    <li>
-      <h5>{{CityStateToZipResult}}</h5>
-    </li>
-  </ul>
+  <h5 class="text-success">{{CityStateToZipResult}}</h5>
 </template>
 
 <script>
