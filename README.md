@@ -1,6 +1,6 @@
 # US Zip Code / City State Look up
 
-> Using Zippopotam.us service api for looking up zip code. Using Vue JS and Webpack. 
+> Using Zippopotam.us service api for looking up zip code. Vue JS framework, Webpack & Babel for browser compatitbility.
 Use bootstrap for simple responsive layout and styling
 
 # Screenshot
