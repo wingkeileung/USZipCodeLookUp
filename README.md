@@ -1,7 +1,10 @@
 # US Zip Code / City State Look up
 
 > Using Zippopotam.us service api for looking up zip code. Using Vue JS and Webpack. 
-Use bootswatch for simple responsive layout and styling
+Use bootstrap for simple responsive layout and styling
+
+# Screenshot
+![](https://github.com/wingkeileung/USZipCodeLookUp/blob/master/screenshot/ss.png "Screenshot of the web app")
 
 # Dependencies
   - Vue: 2.5.2,
@@ -42,10 +45,6 @@ Use bootswatch for simple responsive layout and styling
   - webpack: 3.6.0,
   - webpack-dev-server: 2.9.1,
   - webpack-merge: 4.1.0
-
-# Screenshot
-![](https://github.com/wingkeileung/USZipCodeLookUp/blob/master/screenshot/ss.png "Screenshot of the web app")
-
 
 ## Build Setup
 
