@@ -1,6 +1,6 @@
 <template>
   <div id="CityStateInputForm">
-    <form class="form-control col-md-6 mx-auto" id="CityStateInput" v-on:submit="formSubmit">
+    <form class="form-control col-md-6 mx-auto" style="margin-bottom: 100px;" id="CityStateInput" v-on:submit="formSubmit">
       <div class="row">
         <div class="col">
           <input class="form-control" type="text" v-model="cityToSubmit" placeholder="Enter a US City... e.g. (Seattle)">
